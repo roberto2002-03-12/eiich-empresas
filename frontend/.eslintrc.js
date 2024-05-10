@@ -1,14 +1,17 @@
 module.exports = {
-	root: true,
-	env: { browser: true, es2021: true },
 	extends: [
+		"next",
+		"next/core-web-vitals",
 		"eslint:recommended",
+		"plugin:react/recommended",
 		"plugin:@typescript-eslint/recommended",
-		"plugin:react-hooks/recommended",
+		"prettier",
 	],
-	ignorePatterns: ["dist", ".eslintrc.cjs"],
-	parser: "@typescript-eslint/parser",
-	plugins: ["react-refresh"],
+	plugins: ["react", "@typescript-eslint"],
+	parserOptions: {
+		ecmaVersion: 2021,
+		sourceType: "module",
+	},
 	rules: {
 		semi: ["error", "never"],
 		"object-curly-spacing": ["error", "always"],
@@ -19,12 +22,11 @@ module.exports = {
 		"prefer-arrow-callback": "error",
 		quotes: ["error", "double"],
 		"no-console": "error",
-		"react-refresh/only-export-components": [
-			"warn",
-			{ allowConstantExport: true },
-		],
+		// "react-refresh/only-export-components": ["warn", { allowConstantExport: true }],
 		"@typescript-eslint/no-empty-interface": "error",
 		"@typescript-eslint/no-empty-function": "error",
 		"@typescript-eslint/no-namespace": "error",
+		"react/jsx-uses-react": "off",
+		"react/react-in-jsx-scope": "off",
 	},
 }
