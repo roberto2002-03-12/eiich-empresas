@@ -1,0 +1,32 @@
+module.exports = {
+	extends: [
+		"next",
+		"next/core-web-vitals",
+		"eslint:recommended",
+		"plugin:react/recommended",
+		"plugin:@typescript-eslint/recommended",
+		"prettier",
+	],
+	plugins: ["react", "@typescript-eslint"],
+	parserOptions: {
+		ecmaVersion: 2021,
+		sourceType: "module",
+	},
+	rules: {
+		semi: ["error", "never"],
+		"object-curly-spacing": ["error", "always"],
+		"no-multiple-empty-lines": ["error", { max: 1 }],
+		eqeqeq: ["error", "always"],
+		"no-empty-function": "error",
+		"func-style": ["error", "declaration", { allowArrowFunctions: true }],
+		"prefer-arrow-callback": "error",
+		quotes: ["error", "double"],
+		"no-console": "error",
+		// "react-refresh/only-export-components": ["warn", { allowConstantExport: true }],
+		"@typescript-eslint/no-empty-interface": "error",
+		"@typescript-eslint/no-empty-function": "error",
+		"@typescript-eslint/no-namespace": "error",
+		"react/jsx-uses-react": "off",
+		"react/react-in-jsx-scope": "off",
+	},
+}
