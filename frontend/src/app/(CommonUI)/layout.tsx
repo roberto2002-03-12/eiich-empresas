@@ -5,7 +5,7 @@ export default function CommonLayout({ children }: { children: React.ReactNode }
 	return (
 		<div>
 			<NavBar/>
-			<div className="mt-16">
+			<div className="mt-20">
 				{children}
 			</div>
 			<Footer />

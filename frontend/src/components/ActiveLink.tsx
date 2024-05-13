@@ -13,7 +13,7 @@ export const ActiveLink = ({ path, text }: Props) => {
         <Link 
             href={path}
         >
-            <span className={` hover:text-white hover:bg-jacksons-purple-900 py-3 px-5 rounded-xl ${(pathName === path) && "bg-jacksons-purple-900 border-0 rounded-xl text-white"}`}>{text}</span>
+            <span className={` hover:text-white hover:bg-jacksons-purple-900 hover:opacity-50 py-3 px-5 rounded-xl ${(pathName === path) && "bg-jacksons-purple-900 border-0 rounded-xl text-white"}`}>{text}</span>
         </Link>
     )
 }

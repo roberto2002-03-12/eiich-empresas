@@ -10,7 +10,7 @@ import { Hamburger } from "./components/Hamburger"
 export const NavBar = () => {
 	return (
 		<header
-			className={`fixed w-full z-[999] top-0 left-0 ${"bg-transparent"}  lg:overflow-hidden`}
+			className={`fixed w-full z-[999] top-0 left-0 ${"bg-transparent"}  lg:overflow-hidden bg-white`}
 		>
 			<Container>
 				<nav className="relative flex items-center justify-between py-4 text-electric-violet-950">
