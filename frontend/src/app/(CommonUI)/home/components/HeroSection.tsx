@@ -2,12 +2,23 @@ import { Typography } from "@/components/Typography"
 import { Container } from "@/components/ui/Container"
 import Link from "next/link"
 
+import hero from "../../../../../public/hero.webp"
+
 export const HeroSection = () => {
 	return (
-		<section className="bg-jacksons-purple-900 w-full h-screen text-white">
+		<section
+			className="bg-jacksons-purple-900 w-full h-[60vh] text-white"
+			style={{
+				backgroundImage: `linear-gradient(rgba(0,0,0,), rgba(0,0,0,0.5)), url(${hero.src})`,
+				backgroundColor: "#262084",
+				backgroundSize: "cover",
+				backgroundPosition: "center",
+			}}
+		>
 			<Container>
-				<div className="flex flex-col justify-center text-left h-screen">
+				<div className="flex flex-col justify-center text-left h-[60vh]">
 					<h1 className="z-[1] absolute indent-0 opacity-0">Eiich-empresas</h1>
+
 					<Typography className="max-w-[600px]">
 						Construyendo marcas, impulsando sueños: <br /> Tu socio integral para el
 						éxito empresarial
