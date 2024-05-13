@@ -7,6 +7,8 @@ import { MysqlModule } from './database/mysql/mysql.module';
 
 import config from './config';
 import { environment } from './config/environment';
+import { UsersModule } from './modules/users/users.module';
+import { AuthModule } from './modules/auth/auth.module';
 
 @Module({
   imports: [
@@ -16,6 +18,8 @@ import { environment } from './config/environment';
       isGlobal: true,
     }),
     MysqlModule,
+    UsersModule,
+    AuthModule,
   ],
   controllers: [AppController],
   providers: [AppService],
