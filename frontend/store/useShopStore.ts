@@ -1,3 +1,4 @@
+"use client"
 import { create }  from "zustand"
 import { Product } from "../types/shop/shop.types"
 import { getItem, setItem } from "../utils/localStorage"
@@ -15,6 +16,7 @@ interface shopStore {
     isOpen: boolean
     totalPrice: TotalPrice
     carShop: Product[] | []
+    setCarShop: (newCarShop: Product[]) => void
     UpdateTotalPrice: (subTotal: number, discount: number,totalAmount:number) => void
     openShopCar: (statebtn: boolean) => void
     removeProduct: (index: number) => void
@@ -22,6 +24,9 @@ interface shopStore {
     minusProductQuantity: (id: string) => void //remove
     cleanShopCar: () => void //removeAll
 
+}
+interface ProductSignatures {
+	[key: string]: string | boolean
 }
 
 export const useShopStore = create<shopStore>((set, get)=> ({
@@ -42,6 +47,28 @@ export const useShopStore = create<shopStore>((set, get)=> ({
     openShopCar: statebtn => {
         set({ isOpen: statebtn })
     },
+
+    setCarShop: newCarShop => {
+		const currentPrice = newCarShop[0].price
+		const currentProducts = get().carShop
+		const duplicateArrayProducts = currentProducts?.map(item => {
+			if (item.id === newCarShop[0].id && item.quantity) {
+				item.quantity += 1
+				item.price = currentPrice * item.quantity
+			}
+			return item
+		})
+		const addNewProduct = [...duplicateArrayProducts, ...newCarShop]
+
+		const product: ProductSignatures = {}
+		const newArrayProducts = addNewProduct.filter(item =>
+			product[item.id] ? false : (product[item.id] = true),
+		)
+
+		set({ carShop: newArrayProducts })
+		setItem("carShop", newArrayProducts)
+	},
+
     removeProduct: index => {
 		const updatedCarShop = get().carShop.filter((_, i) => i !== index)
 		set({ carShop: updatedCarShop })
