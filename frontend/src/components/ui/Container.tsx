@@ -1,4 +1,5 @@
 import { ReactNode } from "react"
+import styles from "../styles/container.module.css"
 
 interface Props {
 	children: ReactNode
@@ -6,5 +7,5 @@ interface Props {
 }
 
 export const Container = ({ children, className = "" }: Props) => {
-	return <div className={`mx-auto px-3 ${className}`}>{children}</div>
+	return <div className={`${styles["e_container"]} mx-auto px-3 ${className}`}>{children}</div>
 }
