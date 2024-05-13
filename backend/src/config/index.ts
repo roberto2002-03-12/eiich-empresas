@@ -1,5 +1,4 @@
-import { development } from './development';
-// import { production } from './production';
+import developmentEnv from './environments/development';
+import productionEnv from './environments/production';
 
-// utiliza esto en producción
-export const config = development;
+export default process.env.NODE_ENV === 'prod' ? productionEnv : developmentEnv;
