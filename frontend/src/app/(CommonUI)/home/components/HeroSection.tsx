@@ -1,8 +1,7 @@
 import { Typography } from "@/components/Typography"
 import { Container } from "@/components/ui/Container"
-import Link from "next/link"
-
 import hero from "../../../../../public/hero.webp"
+import { Buttom } from "@/components/ui/Buttom"
 
 export const HeroSection = () => {
 	return (
@@ -28,9 +27,7 @@ export const HeroSection = () => {
 						business because it helps keep the business well organized.
 					</p>
 					<div className="mt-10">
-						<Link href={"/"} className="py-4 px-8 bg-picton-blue-500">
-							Más información
-						</Link>
+						<Buttom className="bg-picton-blue-500 py-4 px-8">Más información</Buttom>
 					</div>
 				</div>
 			</Container>

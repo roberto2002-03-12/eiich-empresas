@@ -6,6 +6,7 @@ import logo from "../../../public/logoCompletoCorporation.webp"
 import Image from "next/image"
 import { FaCartShopping } from "react-icons/fa6"
 import { Hamburger } from "./components/Hamburger"
+import { Buttom } from "../ui/Buttom"
 
 export const NavBar = () => {
 	return (
@@ -28,9 +29,10 @@ export const NavBar = () => {
 								</div>
 								<FaCartShopping className="text-2xl fill-jacksons-purple-900" />
 							</button>
-							<button type="button" className="hidden lg:block px-6 py-3">
-								Cerrar sesion
-							</button>
+
+							<Buttom type="button" className="hidden lg:block px-6 bg-picton-blue-500">
+								Iniciar sesión
+							</Buttom>
 						</div>
 						<Hamburger isOpened={false} />
 					</div>

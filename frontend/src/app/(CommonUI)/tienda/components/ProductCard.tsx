@@ -1,23 +1,26 @@
 import { Buttom } from "@/components/ui/Buttom"
 import Image from "next/image"
+import { Product } from "../../../../../types/shop/shop.types"
 
-export const ProductCard = () => {
+interface Props {
+	product: Product
+}
+
+export const ProductCard = ({ product }: Props) => {
 	return (
-		<div className="text-center">
+		<div className="text-center w-full">
 			<Image
-				src={
-					"https://res.cloudinary.com/dao54tzzc/image/upload/v1715178604/media/1715178603941_gorro_vz4oct.webp"
-				}
+				src={product.imageProduct}
 				alt="gorro"
 				width={0}
 				height={0}
-                sizes="100vw"
+				sizes="100vw"
 				style={{ width: "100%", height: "auto" }}
 				className=""
 			></Image>
-			<p className="my-4 text-xl font-semibold">Gorro</p>
-			<p className="mb-4">Gorro de lona, ideal para protegerte del sol con estilo. </p>
-			<Buttom className="w-full">$ 3.99</Buttom>
+			<p className="my-4 text-xl font-semibold">{product.name}</p>
+			<p className="mb-4 h-[70px]">{product.description}</p>
+			<Buttom className="w-full">$ {product.price}</Buttom>
 		</div>
 	)
 }

@@ -1,4 +1,3 @@
-
 import { Container } from "@/components/ui/Container"
 import Link from "next/link"
 // import { FaPhoneAlt } from "react-icons/fa"
@@ -14,11 +13,7 @@ export const Footer = () => {
 				<div className="flex flex-col md:flex-row gap-12 justify-between py-12">
 					<div>
 						<Link href={"/"}>
-							<Image 
-								src={logoCorporation} 
-								alt="logo" 
-								className="w-[110px]" 
-							/>
+							<Image src={logoCorporation} alt="logo" className="w-[110px]" />
 						</Link>
 					</div>
 					<div>
@@ -64,10 +59,7 @@ export const Footer = () => {
 						</ul>
 					</div>
 					<div>
-						<Link
-							href="/"
-							className="flex flex-col md:items-center group"
-						>
+						<Link href="/" className="flex flex-col md:items-center group">
 							<ComplaintsBook
 								className="fill-white group-hover:fill-vividIndigo transition-colors"
 								secondColor="yellow"
@@ -88,13 +80,14 @@ export const Footer = () => {
 				</div>
 				<hr className="border-none h-[1px] bg-vividIndigo/30" />
 			</Container>
-			<div className="bg-[#1e1252] py-3">
+			{/* <div className="bg-[#1e1252] py-3">
 				<Container>
 					<p className="text-center">
-						&copy; {new Date().getFullYear()} Eiich Empresas. Todos los derechos reservados.
+						&copy; {new Date().getFullYear()} Eiich Empresas. Todos los derechos
+						reservados.
 					</p>
 				</Container>
-			</div>
+			</div> */}
 		</footer>
 	)
 }

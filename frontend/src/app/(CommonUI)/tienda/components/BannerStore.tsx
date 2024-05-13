@@ -3,7 +3,7 @@ import banner from "../../../../../public/bannerTienda.webp"
 
 export const BannerStore = () => {
 	return (
-		<div className="object-cover h-[300px]">
+		<div className="object-cover h-[350px]">
 			<div
 				className="w-full h-full relative overflow-hidden object-cover"
 				style={{
@@ -11,7 +11,7 @@ export const BannerStore = () => {
 				}}
 			>
 				<div
-					className="h-full left-0 w-full inset-0 "
+					className="h-full left-0 w-full "
 					style={{
 						backgroundImage:
 							"linear-gradient(-90deg, transparent 20%, rgb(38, 32, 132) 50%)",
@@ -19,7 +19,7 @@ export const BannerStore = () => {
 				></div>
 				<Container>
 					<div
-						className=" absolute leading-none  top-1/2 left-[50px] md:left-[100px] 2xl:left-[450px] -translate-y-1/2 text-xl md:text-2xl lg:text-4xl drop-shadow-sm tracking-tight font-poppins font-bold"
+						className=" absolute leading-none  top-1/2 left-auto -translate-y-1/2 text-xl md:text-2xl lg:text-4xl drop-shadow-sm tracking-tight font-poppins font-bold"
 						style={{ color: "rgb(250, 244, 255)" }}
 					>
 						Merch<br></br>{" "}
