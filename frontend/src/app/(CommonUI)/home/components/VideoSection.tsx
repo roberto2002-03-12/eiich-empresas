@@ -8,7 +8,7 @@ export const VideoSection = () => {
 			<Container>
 				<div className="flex gap-10 items-center justify-center m-auto">
 					<div className="bg-picton-blue-300 rounded-xl w-[800px] h-[500px] md:w-[2000px] md:h-[600px] flex items-center justify-center">
-						<FaPlay className="text-8xl text-white" />
+						<FaPlay className="text-8xl text-white cursor-pointer" />
 						{/* <video src="" className="aspect-video w-[550px]"></video> */}
 					</div>
 					<div>
