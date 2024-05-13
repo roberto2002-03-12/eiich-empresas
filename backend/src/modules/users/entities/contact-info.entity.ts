@@ -18,42 +18,63 @@ export class ContactInfo {
   @Column({
     type: 'varchar',
     length: 45,
-    name: 'type_document_id',
     nullable: false,
+    name: 'land_line',
   })
-  typeDocumentId: string;
+  landLine: string;
+
+  @Column({
+    type: 'varchar',
+    length: 25,
+    nullable: false,
+    name: 'phone_number',
+  })
+  phoneNumber: string;
 
   @Column({
     type: 'varchar',
     length: 45,
-    name: 'document_number',
     nullable: false,
+    name: 'line_operator',
   })
-  documentNumber: string;
+  lineOperator: string;
 
   @Column({
     type: 'varchar',
-    length: 65,
-    name: 'first_name',
+    length: 105,
     nullable: false,
+    name: 'address',
   })
-  firstName: string;
+  address: string;
 
   @Column({
     type: 'varchar',
-    length: 65,
-    name: 'first_last_name',
+    length: 105,
     nullable: false,
+    name: 'reference',
   })
-  fisrtLastName: string;
+  reference: string;
 
   @Column({
     type: 'varchar',
-    length: 65,
-    name: 'second_last_name',
+    length: 45,
     nullable: false,
   })
-  secondLastName: string;
+  department: string;
+
+  @Column({
+    type: 'varchar',
+    length: 45,
+    nullable: false,
+  })
+  province: string;
+
+  @Column({
+    type: 'varchar',
+    length: 45,
+    nullable: false,
+  })
+  district: string;
 
   // userId
   @OneToOne(() => User, {
