@@ -8,5 +8,5 @@ interface Props {
 }
 
 export const Typography = ({ children, text = "", className = "" }: Props) => {
-	return <h2 className={twMerge("font-poppins font text-5xl", text, className)}>{children}</h2>
+	return <h2 className={twMerge("font-poppins font-bold text-5xl", text, className)}>{children}</h2>
 }
